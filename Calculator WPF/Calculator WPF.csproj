@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Calculator_WPF</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons\ham.png" />
+    <None Remove="icons\history.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons\ham.png" />
+    <Resource Include="icons\history.png" />
+  </ItemGroup>
+
+</Project>

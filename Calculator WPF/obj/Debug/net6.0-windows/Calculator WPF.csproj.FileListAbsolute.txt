@@ -1,0 +1,21 @@
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.exe
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.deps.json
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.runtimeconfig.json
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.dll
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.pdb
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.csproj.AssemblyReference.cache
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\App.g.cs
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF_MarkupCompile.cache
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF_MarkupCompile.lref
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\MainWindow.baml
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.g.resources
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.GeneratedMSBuildEditorConfig.editorconfig
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.AssemblyInfoInputs.cache
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.AssemblyInfo.cs
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.csproj.CoreCompileInputs.cache
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.dll
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\refint\Calculator WPF.dll
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.pdb
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.genruntimeconfig.cache
+D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\ref\Calculator WPF.dll

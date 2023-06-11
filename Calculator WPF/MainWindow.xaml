@@ -1,0 +1,409 @@
+﻿<Window x:Class="Calculator_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="340" Background="#F8F8F8">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <WrapPanel>
+            <Button BorderBrush="Transparent" Background="Transparent" Width="25" Height="25" Margin="5 11.5 0 0">
+                <Image Source="icons/ham.png" Width="20" ></Image>
+            </Button>
+            <TextBlock Text="Standard" FontSize="20" FontWeight="SemiBold" Margin="10 10 0 0"></TextBlock>
+            <Button BorderBrush="Transparent" Background="Transparent" Width="25" Height="25" Margin="160 11 0 0">  
+                <Image Source="icons/history.png" Width="20" ></Image>
+            </Button>
+            
+        </WrapPanel>
+
+
+        <TextBox Grid.Row="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="40" FontWeight="SemiBold" BorderBrush="Transparent" BorderThickness="2" Background="Transparent">
+            0
+        </TextBox>
+
+        <WrapPanel Grid.Row="2" VerticalAlignment="Center" Margin="10 10 0 0">
+            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="MC" Margin="0 0 25 0" Foreground="LightGray"></Button>
+            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="MR" Margin="0 0 25 0" Foreground="LightGray"></Button>
+            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="M+" Margin="0 0 25 0"></Button>
+            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="M-" Margin="0 0 25 0"></Button>
+            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="MS" Margin="0 0 25 0"></Button>
+            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="M"  Margin="0 0 25 0"></Button>
+        </WrapPanel>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Width="80" Height="50" Grid.Column="3">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="⌫"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="C"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="CE"/>
+                </Button>
+                
+                <Button Width="80" Height="50" Grid.Column="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="%"/>
+                </Button>
+                
+                
+
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Width="80" Height="50" Grid.Column="3">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="÷" FontSize="20"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="√x"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="x²"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="⅟𝓍"/>
+                </Button>
+
+
+            </Grid>
+            
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Width="80" Height="50" Grid.Column="3">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="X"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="9" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="8" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="7" FontSize="15"/>
+                </Button>
+
+
+
+
+
+
+            </Grid>
+            
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Width="80" Height="50" Grid.Column="3">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="-" FontSize="20"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="6" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="5" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="4" FontSize="15"/>
+                </Button>
+
+
+
+
+
+            </Grid>
+            
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Width="80" Height="50" Grid.Column="3">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="+" FontSize="20"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="3" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="2" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="1" FontSize="15"/>
+                </Button>
+
+
+
+
+
+
+
+
+
+
+            </Grid> 
+            
+            
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Width="80" Height="50" Grid.Column="3">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#005B9E" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="BorderBlue_MouseMove" MouseLeave="BorderBlue_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="=" FontSize="20" Foreground="White"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="," FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="1" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="0" FontSize="15"/>
+                </Button>
+
+                <Button Width="80" Height="50" Grid.Column="0" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <TextBlock Text="±" FontSize="15"/>
+                </Button>
+
+            </Grid>
+            
+            
+        </Grid>
+        
+        
+        
+    </Grid>
+</Window>
