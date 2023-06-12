@@ -57,7 +57,17 @@ namespace Calculator_WPF
                 {
                     if (operation != "")
                     {
-                        CreateExpression();
+                        string a = OperationShow.Text.Substring(OperationShow.Text.IndexOf(operation) + 1);
+                        if (
+                            OperationShow.Text.Substring(0, OperationShow.Text.IndexOf(operation)-1) == MainTextBox.Text)
+                        {
+                            OperationShow.Text.Replace(operation, buttonContent);
+                        }
+                        else
+                        {
+                            CreateExpression();
+
+                        }
                     }
                     operation = buttonContent;
                     OperationShow.Text = MainTextBox.Text + " " + operation + " ";
@@ -128,6 +138,10 @@ namespace Calculator_WPF
             catch(DivideByZeroException dbz)
             {
                 MainTextBox.Text = "∞";
+            }
+            catch(Exception ex)
+            {
+                MainTextBox.Text = "0";
             }
             operation = "";
         }

@@ -19,3 +19,24 @@ D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\refint\C
 D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.pdb
 D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.genruntimeconfig.cache
 D:\WinForm & WPF\Calculator WPF\Calculator WPF\obj\Debug\net6.0-windows\ref\Calculator WPF.dll
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.exe
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.deps.json
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.runtimeconfig.json
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.dll
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\bin\Debug\net6.0-windows\Calculator WPF.pdb
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.csproj.AssemblyReference.cache
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF_MarkupCompile.cache
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF_MarkupCompile.lref
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.g.resources
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.AssemblyInfoInputs.cache
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.AssemblyInfo.cs
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.csproj.CoreCompileInputs.cache
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.dll
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\refint\Calculator WPF.dll
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.pdb
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\Calculator WPF.genruntimeconfig.cache
+C:\Users\Hesen_zc39\Source\Repos\Calculator-WPF\Calculator WPF\obj\Debug\net6.0-windows\ref\Calculator WPF.dll
