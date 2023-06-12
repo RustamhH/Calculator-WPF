@@ -16,28 +16,87 @@
 
 
         <WrapPanel>
-            <Button BorderBrush="Transparent" Background="Transparent" Width="25" Height="25" Margin="5 11.5 0 0">
+            <Button Width="25" Height="20" Margin="5 11.5 0 0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1" CornerRadius="3" MouseMove="Border_MouseMove" MouseLeave="BorderM_MouseLeave">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
                 <Image Source="icons/ham.png" Width="20" ></Image>
             </Button>
+            
+           
             <TextBlock Text="Standard" FontSize="20" FontWeight="SemiBold" Margin="10 10 0 0"></TextBlock>
-            <Button BorderBrush="Transparent" Background="Transparent" Width="25" Height="25" Margin="160 11 0 0">  
+            
+             <Button Width="25" Height="25" Margin="160 11 0 0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" MouseMove="Border_MouseMove" MouseLeave="BorderM_MouseLeave">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
                 <Image Source="icons/history.png" Width="20" ></Image>
             </Button>
+
+            <TextBlock x:Name="OperationShow" Width="50" Margin="280 8 0 0" Foreground="Gray" ></TextBlock>
+            
             
         </WrapPanel>
 
 
-        <TextBox Grid.Row="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="40" FontWeight="SemiBold" BorderBrush="Transparent" BorderThickness="2" Background="Transparent">
+        <TextBox Name="MainTextBox" Grid.Row="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="40" FontWeight="SemiBold" BorderBrush="Transparent" BorderThickness="2" Background="Transparent">
             0
         </TextBox>
 
         <WrapPanel Grid.Row="2" VerticalAlignment="Center" Margin="10 10 0 0">
-            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="MC" Margin="0 0 25 0" Foreground="LightGray"></Button>
-            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="MR" Margin="0 0 25 0" Foreground="LightGray"></Button>
-            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="M+" Margin="0 0 25 0"></Button>
-            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="M-" Margin="0 0 25 0"></Button>
-            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="MS" Margin="0 0 25 0"></Button>
-            <Button Width="25" Height="20" Background="Transparent" BorderBrush="Transparent" Content="M"  Margin="0 0 25 0"></Button>
+            <TextBlock Text="MC" VerticalAlignment="Center" Foreground="LightGray" Margin="5 0 25 0"></TextBlock>
+            <TextBlock Text="MR" VerticalAlignment="Center" Foreground="LightGray" Margin="5 0 25 0"></TextBlock>
+
+            
+
+            <Button Width="25" Height="20" Margin="5 0 25 0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1" CornerRadius="3" MouseMove="Border_MouseMove" MouseLeave="BorderM_MouseLeave">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+                <TextBlock Text="M+"/>
+            </Button>
+
+            <Button Width="25" Height="20" Margin="0 0 25 0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1" CornerRadius="3" MouseMove="Border_MouseMove" MouseLeave="BorderM_MouseLeave">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+                <TextBlock Text="M-"/>
+            </Button>
+
+
+
+            <Button Width="25" Height="20" Margin="5 0 25 0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1" CornerRadius="3" MouseMove="Border_MouseMove" MouseLeave="BorderM_MouseLeave">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+                <TextBlock Text="MS"/>
+            </Button>
+
+
+            <TextBlock Text="M" VerticalAlignment="Center" Foreground="LightGray" Margin="5 0 25 0"></TextBlock>
+
+
+
         </WrapPanel>
 
         <Grid Grid.Row="3">
@@ -58,7 +117,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Width="80" Height="50" Grid.Column="3">
+                <Button Width="80" Height="50" Grid.Column="3" Content="⌫" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -66,10 +125,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="⌫"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="2">
+                <Button Width="80" Height="50" Grid.Column="2" Content="C" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -77,10 +135,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="C"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="1">
+                <Button Width="80" Height="50" Grid.Column="1" Content="CE" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -88,10 +145,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="CE"/>
                 </Button>
                 
-                <Button Width="80" Height="50" Grid.Column="0">
+                <Button Width="80" Height="50" Grid.Column="0" Content="%" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -99,7 +155,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="%"/>
                 </Button>
                 
                 
@@ -115,7 +170,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Button Width="80" Height="50" Grid.Column="3">
+                <Button Width="80" Height="50" Grid.Column="3" Content="÷" FontSize="20" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -123,10 +178,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="÷" FontSize="20"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="2">
+                <Button Width="80" Height="50" Grid.Column="2" Content="√x" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -134,10 +188,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="√x"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="1">
+                <Button Width="80" Height="50" Grid.Column="1" Content="x²" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -145,10 +198,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="x²"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="0">
+                <Button Width="80" Height="50" Grid.Column="0" Content="⅟𝓍" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -156,7 +208,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="⅟𝓍"/>
                 </Button>
 
 
@@ -171,7 +222,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Button Width="80" Height="50" Grid.Column="3">
+                <Button Width="80" Height="50" Grid.Column="3" Content="x" Click="Button_Click" FontSize="20">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -179,10 +230,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="X"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="2">
+                <Button Width="80" Height="50" Grid.Column="2" Content="9" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -190,10 +240,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="9" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="1">
+                <Button Width="80" Height="50" Grid.Column="1" Content="8" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -201,10 +250,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="8" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="0">
+                <Button Width="80" Height="50" Grid.Column="0" Content="7" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -212,7 +260,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="7" FontSize="15"/>
                 </Button>
 
 
@@ -231,7 +278,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Button Width="80" Height="50" Grid.Column="3">
+                <Button Width="80" Height="50" Grid.Column="3" Click="Button_Click" Content="-" FontSize="20">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -239,10 +286,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="-" FontSize="20"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="2">
+                <Button Width="80" Height="50" Grid.Column="2" Content="6" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -250,10 +296,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="6" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="1">
+                <Button Width="80" Height="50" Grid.Column="1" Content="5" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -261,10 +306,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="5" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="0">
+                <Button Width="80" Height="50" Grid.Column="0" Content="4" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -272,7 +316,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="4" FontSize="15"/>
                 </Button>
 
 
@@ -290,7 +333,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Button Width="80" Height="50" Grid.Column="3">
+                <Button Width="80" Height="50" Grid.Column="3" Content="+" FontSize="20" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -298,10 +341,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="+" FontSize="20"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="2">
+                <Button Width="80" Height="50" Grid.Column="2" Content="3" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -309,10 +351,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="3" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="1">
+                <Button Width="80" Height="50" Grid.Column="1" Content="2" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -320,10 +361,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="2" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="0">
+                <Button Width="80" Height="50" Grid.Column="0" Content="1" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -331,7 +371,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="1" FontSize="15"/>
                 </Button>
 
 
@@ -354,18 +393,17 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Width="80" Height="50" Grid.Column="3">
+                <Button Width="80" Height="50" Grid.Column="3" Content="=" FontSize="20" Foreground="White" Click="Button_Click">
                     <Button.Template>
-                        <ControlTemplate TargetType="Button">
+                        <ControlTemplate TargetType="Button" >
                             <Border Background="#005B9E" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="BorderBlue_MouseMove" MouseLeave="BorderBlue_MouseLeave">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="=" FontSize="20" Foreground="White"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="2">
+                <Button Width="80" Height="50" Grid.Column="2" Content="," FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -373,10 +411,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="," FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="1" >
+                <Button Width="80" Height="50" Grid.Column="1" Content="0" FontSize="15" Click="Button_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -384,10 +421,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="0" FontSize="15"/>
                 </Button>
 
-                <Button Width="80" Height="50" Grid.Column="0" >
+                <Button Width="80" Height="50" Grid.Column="0" Content="±" FontSize="15" Click="Button_Click" >
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="#F0F0F0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" MouseMove="Border_MouseMove" MouseLeave="Border_MouseLeave">
@@ -395,7 +431,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                    <TextBlock Text="±" FontSize="15"/>
                 </Button>
 
             </Grid>
