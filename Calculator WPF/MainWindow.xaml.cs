@@ -90,6 +90,7 @@ namespace Calculator_WPF
                     number = Math.Sqrt(number);
                     MainTextBox.Text = number.ToString();
                     OperationShow.Text = $"√({number*number})";
+                    operation = "";
                 }
                 else if (buttonContent == "x²")
                 {
@@ -97,6 +98,15 @@ namespace Calculator_WPF
                     number*=number;
                     MainTextBox.Text = number.ToString();
                     OperationShow.Text = $"sqr({Math.Sqrt(number)})";
+                    operation = "";
+                }
+                else if(buttonContent== "⅟𝓍")
+                {
+                    double number = Convert.ToDouble(MainTextBox.Text);
+                    number = 1 / number;
+                    MainTextBox.Text = number.ToString();
+                    OperationShow.Text = $"1/{1/number}";
+                    operation = "";
                 }
             }
         }
@@ -111,7 +121,15 @@ namespace Calculator_WPF
             firstNumber = OperationShow.Text.Substring(0, OperationShow.Text.IndexOf(operation));
             secondNumber = MainTextBox.Text;
             OperationShow.Text = firstNumber + op + secondNumber + " =";
-            MainTextBox.Text = FindResult(firstNumber + op + secondNumber).ToString();
+            try
+            {
+                MainTextBox.Text = FindResult(firstNumber + op + secondNumber).ToString();
+            }
+            catch(DivideByZeroException dbz)
+            {
+                MainTextBox.Text = "∞";
+            }
+            operation = "";
         }
 
         private double FindResult(string result)

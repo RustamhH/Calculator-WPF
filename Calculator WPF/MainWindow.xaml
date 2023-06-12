@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="340" Background="#F8F8F8">
+        Title="Calculator" Height="500" Width="340" Background="#F8F8F8" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"></RowDefinition>
@@ -41,7 +41,7 @@
                 <Image Source="icons/history.png" Width="20" ></Image>
             </Button>
 
-            <TextBlock x:Name="OperationShow" Width="50" Margin="280 8 0 0" Foreground="Gray" ></TextBlock>
+            <TextBlock x:Name="OperationShow" Width="300"  TextAlignment="Right" Margin="0 10 0 0"  Foreground="Gray" ></TextBlock>
             
             
         </WrapPanel>
